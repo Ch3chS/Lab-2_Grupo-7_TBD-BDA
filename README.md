@@ -14,12 +14,12 @@ Este repositorio contiene todos los archivos relacionados con el laboratorio 2 d
 El proyecto consiste en desarrollar un sistema para la gestión del voluntariado espontáneo con Api Restful cuya interfaz sea realizada en Vue.js y Backend en Spring Boot y, a diferencia de la vez anterior, se hará uso de PostGIS.<br>
 
 ### Tareas a realizar
-- [ ] Entender el problema
-- [ ] Investigar tecnologías a usar
+- [x] Entender el problema
+- [x] Investigar tecnologías a usar
 - [ ] Dividir el trabajo
 - [ ] Realizar el diseño 
-  - [ ] Diseñar base de datos
-  - [ ] Diseñar Back-end
+  - [x] Diseñar base de datos
+  - [x] Diseñar Back-end
   - [ ] Diseñar Front-End
 - [ ] Realizar construcción de base de datos, Back-End y Front-end
 - [ ] Realizar ppt para la presentación
