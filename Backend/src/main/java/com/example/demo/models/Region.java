@@ -1,5 +1,7 @@
 package com.example.demo.models;
 
+import org.locationtech.jts.geom.MultiPolygon;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -41,7 +43,7 @@ public class Region {
      * Es de tipo GEOMETRY en la base de datos.
      */
     @Column(name = "geom", nullable = false)
-    private String geom;
+    private MultiPolygon geom;
 
     // Getters y setters
 
@@ -73,7 +75,7 @@ public class Region {
      * Método que permite obtener la geometría de una región
      * @return geometría de la región (un valor de tipo string)
      */
-    public String getGeom() {
+    public MultiPolygon getGeom() {
         return geom;
     }
 
@@ -81,7 +83,7 @@ public class Region {
      * Método que permite actualizar la geometría de una región
      * @param geom nueva geometría para la región (de tipo string)
      */
-    public void setGeom(String geom) {
+    public void setGeom(MultiPolygon geom) {
         this.geom = geom;
     }
 }

@@ -2,6 +2,8 @@ package com.example.demo.models;
 
 import java.time.LocalDateTime;
 
+import org.locationtech.jts.geom.Point;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -64,8 +66,8 @@ public class Emergency {
      * Columna con la ubicación de la emergencia.
      * Actualización postGIS (lab 2)
      */
-    @Column(nullable = false)
-    private String location;
+    @Column(name = "location",nullable = false, columnDefinition = "GEOMETRY(Point, 4236)")
+    private Point location;
 
 
     // ----------------------------------------- Métodos -----------------------------------------------------
@@ -138,7 +140,7 @@ public class Emergency {
      * Método que permite obtener la ubicación de una emergencia
      * @return ubicación de la emergencia (un valor de tipo Geometry)
      */
-    public String getLocation() {
+    public Point getLocation() {
         return location;
     }
 
@@ -146,7 +148,7 @@ public class Emergency {
      * Método que permite actualizar la ubicación de una emergencia
      * @param location nueva ubicación para la emergencia (de tipo Geometry)
      */
-    public void setLocation(String location) {
+    public void setLocation(Point location) {
         this.location = location;
     }
     

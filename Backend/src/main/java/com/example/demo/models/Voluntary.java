@@ -1,5 +1,8 @@
 package com.example.demo.models;
 
+
+import org.locationtech.jts.geom.Point;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -80,8 +83,8 @@ public class Voluntary {
      * Columna con la ubicación del voluntario. 
      * Actualización postGIS (lab 2)
      */
-    @Column(nullable = false)
-    private String location;
+    @Column(name = "location", nullable = false, columnDefinition = "GEOMETRY(Point, 4236)")
+    private Point location;
 
     // ----------------------------------------- Métodos -----------------------------------------------------
 
@@ -177,7 +180,7 @@ public class Voluntary {
      * Método que permite obtener la ubicación de un voluntario
      * @return ubicación del voluntario (un valor de tipo Geometry)
      */
-    public String getLocation() {
+    public Point getLocation() {
         return location;
     }
 
@@ -185,7 +188,7 @@ public class Voluntary {
      * Método que permite actualizar la ubicación de un voluntario
      * @param location nueva ubicación para el voluntario (de tipo Geometry)
      */
-    public void setLocation(String location) {
+    public void setLocation(Point location) {
         this.location = location;
     }
 
