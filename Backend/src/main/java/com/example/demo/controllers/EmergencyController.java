@@ -79,10 +79,15 @@ public class EmergencyController {
         service.delete(id);
     }
 
-    // Método para obtener emergencias por rango de fechas
     @PostMapping("/byDate")
     public List<EmergencyDto> getEmergenciesByDate(@RequestBody DateRange dateRange) throws Exception {
         List<Emergency> emergencies = service.getByDate(dateRange.getStartDate(), dateRange.getEndDate());
+        return emergencies.stream().map(this::convertToDto).collect(Collectors.toList());
+    }
+
+    @GetMapping("/byVoluntaryLocation/{rut}")
+    public List<EmergencyDto> getEmergenciesByVoluntaryLocation(@PathVariable String rut) {
+        List<Emergency> emergencies = service.getByVoluntaryLocation(rut);
         return emergencies.stream().map(this::convertToDto).collect(Collectors.toList());
     }
 

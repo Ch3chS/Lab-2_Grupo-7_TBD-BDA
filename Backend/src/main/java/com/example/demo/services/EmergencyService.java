@@ -136,6 +136,13 @@ public class EmergencyService {
          return repo.findByDateBetween(startDate, endDate);
      }
      
-
+     /**
+     * Obtiene todas las emergencias que ocurren en la misma region de un voluntario.
+     * @param rut Rut del voluntario.
+     * @return Una lista de todas las emergencias dentro de la misma region que el voluntario.
+     */
+    public List<Emergency> getByVoluntaryLocation(String rut) {
+        return repo.findByVoluntaryLocation(rut);
+    }
 
 }

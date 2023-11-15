@@ -19,5 +19,7 @@ public interface EmergencyRepo extends JpaRepository<Emergency, Long> {
     @Query("SELECT e FROM Emergency e WHERE e.date BETWEEN :startDate AND :endDate")
     List<Emergency> findByDateBetween(@Param("startDate") LocalDateTime startDate, @Param("endDate") LocalDateTime endDate);
     
+    @Query(value = "SELECT emergency.* FROM voluntary JOIN region ON ST_Within(voluntary.location, region.geom) JOIN emergency ON ST_Within(emergency.location, region.geom) WHERE voluntary.rut = :rut", nativeQuery = true)
+    List<Emergency> findByVoluntaryLocation(@Param("rut") String rut);
 }
 
