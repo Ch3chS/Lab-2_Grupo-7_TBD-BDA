@@ -56,7 +56,7 @@ $ ./gradlew bootRun
 
 - Inicializar pagina de acceso:
  Dirigirse a directorio de aplicación front-end desde terminal
-$ cd ./Lab-1_Grupo-7_TBD-BDA/Frontend
+$ cd ./Lab-1_Grupo-7_TBD-BDA/frontend
 
 ### Instalar dependencias necesarias para la ejecución
 $ yarn install
