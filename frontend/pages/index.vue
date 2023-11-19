@@ -1,14 +1,25 @@
 <template>
   <div class="container">
     <h1 class="text--center">Laboratorio 1 TBD, grupo 7</h1>
-    <form action="/login" class="form-container">
+    
+    <!-- Botón para ir al login -->
+    <form action="/login" class="form-container" @submit.prevent="goToLogin">
       <button type="submit" class="form__field input[type='submit'] success button-large">
         Ir al login
       </button>
     </form>
-    <form action="/table" class="form-container">
+
+    <!-- Botón para ver la tabla -->
+    <form action="/table" class="form-container" @submit.prevent="goToTable">
       <button type="submit" class="form__field input[type='submit'] success button-large">
         Ver Tabla
+      </button>
+    </form>
+
+    <!-- Botón para ver emergencias por voluntario -->
+    <form action="/emergenciesByVoluntary" class="form-container" @submit.prevent="goToEmergencies">
+      <button type="submit" class="form__field input[type='submit'] success button-large">
+        Ver Emergencias por Voluntario
       </button>
     </form>
   </div>
@@ -17,7 +28,20 @@
 <script>
 export default {
   name: 'index',
-  methods: {}
+  methods: {
+    // Función para redirigir al login
+    goToLogin() {
+      this.$router.push('/login');
+    },
+    // Función para redirigir a ver la tabla
+    goToTable() {
+      this.$router.push('/table');
+    },
+    // Función para redirigir a ver emergencias por voluntario
+    goToEmergencies() {
+      this.$router.push('/emergenciesByVoluntary');
+    }
+  }
 }
 </script>
 
