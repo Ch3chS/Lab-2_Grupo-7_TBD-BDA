@@ -1,27 +1,24 @@
 <template>
   <div class="container">
-    <h1 class="text--center">Laboratorio 1 TBD, grupo 7</h1>
-    
-    <!-- Botón para ir al login -->
-    <form action="/login" class="form-container" @submit.prevent="goToLogin">
-      <button type="submit" class="form__field input[type='submit'] success button-large">
+    <h1 class="text--center">Emergencias</h1>
+
+    <!-- Botones alineados en la parte inferior -->
+    <div class="button-container">
+      <!-- Botón para ir al login -->
+      <button type="button" class="button-large success" @click="goToLogin">
         Ir al login
       </button>
-    </form>
 
-    <!-- Botón para ver la tabla -->
-    <form action="/table" class="form-container" @submit.prevent="goToTable">
-      <button type="submit" class="form__field input[type='submit'] success button-large">
+      <!-- Botón para ver la tabla -->
+      <button type="button" class="button-large success" @click="goToTable">
         Ver Tabla
       </button>
-    </form>
 
-    <!-- Botón para ver emergencias por voluntario -->
-    <form action="/emergenciesByVoluntary" class="form-container" @submit.prevent="goToEmergencies">
-      <button type="submit" class="form__field input[type='submit'] success button-large">
-        Ver Emergencias por Voluntario
+      <!-- Botón para ver emergencias por voluntario -->
+      <button type="button" class="button-large success" @click="goToEmergencies">
+        Emergencias por Voluntario
       </button>
-    </form>
+    </div>
   </div>
 </template>
 
@@ -55,66 +52,32 @@ export default {
   margin-top: 20px; /* Reducido el margen superior */
 }
 
+body {
+  background-color: black; /* Cambiado a color negro de fondo para toda la página */
+}
+
 .container {
-  display: flex;
-  flex-direction: column; /* Cambio a una disposición de columna */
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .button-large {
-  width: 100%; /* Ancho completo */
-  padding: 16px; /* Aumenta el espacio alrededor del botón */
-  font-size: 20px; /* Aumenta el tamaño del texto */
-}
-
-.form-container {
-  width: 100%;
-  max-width: 500px;
-  padding: 16px;
-}
-
-.form {
-  width: 100%;
-  padding: 16px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.form__field {
-  margin-bottom: 16px;
-}
-
-.form__field label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.form__field input[type="submit"] {
-  border-radius: 8px; /* Mayor redondez en los bordes */
-  font-size: 18px; /* Aumenta el tamaño del texto en el botón */
-  padding: 12px; /* Aumenta el espacio interior del botón */
+  flex: 1;
+  margin: 8px;
+  border-radius: 12px;
+  font-size: 30px; /* Aumenta el tamaño de fuente */
+  padding: 40px 20px; /* Ajusta el padding: arriba/abajo, izquierda/derecha */
+  box-sizing: border-box;
+  max-width: calc(100% / 3); /* Aproximadamente 1/3 del ancho de la página */
+  background-color: #4CAF50; /* Color blanco de fondo para los botones */
 }
 
 .text--center {
   text-align: center;
-}
-
-.message {
-  margin-top: 16px;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.success {
-  color: white;
-  background-color: #28a745;
-}
-
-.error {
-  color: white;
-  background-color: #dc3545;
 }
 </style>
