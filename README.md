@@ -16,19 +16,22 @@ El proyecto consiste en desarrollar un sistema para la gestión del voluntariado
 ### Tareas a realizar
 - [x] Entender el problema
 - [x] Investigar tecnologías a usar
-- [ ] Dividir el trabajo
-- [ ] Realizar el diseño 
+- [x] Dividir el trabajo
+- [x] Realizar el diseño 
   - [x] Diseñar base de datos
   - [x] Diseñar Back-end
-  - [ ] Diseñar Front-End
-- [ ] Realizar construcción de base de datos, Back-End y Front-end
-- [ ] Realizar ppt para la presentación
-- [ ] Preparar entrega
-- [ ] Pulir README.md
+  - [x] Diseñar Front-End
+- [x] Realizar construcción de base de datos, Back-End y Front-end
+- [x] Realizar ppt para la presentación
+- [x] Preparar entrega
+- [x] Pulir README.md
 - [ ] Entregar y presentar
 
 ### Organización carpetas
-
+Lab-2_Grupo-7_TBD-BDA (Carpeta contenedora) ->
+- [Backend](Backend) (Carpeta de Codigo funte con Controladores, lógica de negocios, modelos, y conexiones a BD)
+- [Database](Database) (Carpeta con los archivos de creacion y poblado de la BD. junto con sentencias de Prueba)
+- [frontend](frontend) (Carpeta con las vistas, componente, html, css, y js necesarios para UX)
 
 
 ## Instalación
@@ -50,13 +53,13 @@ Para ejecutar correctamente todo el proyecto, además de los archivos del reposi
 Dirigirse a directorio de aplicación back-end desde terminal
 $ cd ./Lab-2_Grupo-7_TBD-BDA/Backend
 
-Ejecutar el proyecto, cuyo acceso será: http://localhost:3000
+Ejecutar el proyecto, cuyo acceso será: http://localhost:8080
 $ ./gradlew bootRun
 
 
 - Inicializar pagina de acceso:
  Dirigirse a directorio de aplicación front-end desde terminal
-$ cd ./Lab-1_Grupo-7_TBD-BDA/frontend
+$ cd ./Lab-2_Grupo-7_TBD-BDA/frontend
 
 ### Instalar dependencias necesarias para la ejecución
 $ yarn install
